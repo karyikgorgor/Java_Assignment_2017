@@ -27,11 +27,11 @@ public class Product {
     }
 
     //return product ID
-    public String getId() {
+    private String getId() {
         return id;
     }
     //return product category
-    public String getCategory() {
+    private String getCategory() {
         return category;
     }
     // set product name
@@ -55,7 +55,7 @@ public class Product {
     }
 
     //return discount of products
-    public double getDiscount() {
+    private double getDiscount() {
         return discount;
     }
     //set prices of products
@@ -63,10 +63,10 @@ public class Product {
         price = p;
     }
     //return prices of products
-    public double getPrice() {
+    private double getPrice() {
         return price;
     }
-    //return discount proce
+    //return discount price
     public double getdPrice() {
         return dPrice;
     }

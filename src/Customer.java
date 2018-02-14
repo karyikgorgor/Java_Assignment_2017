@@ -25,7 +25,7 @@ public class Customer {
     private Scanner input = new Scanner(System.in);
 
     //constructor
-    private Customer(int x, String customerName, String gender, String dob, String phoneNo, String email, String mailingAddress) {
+    public Customer(int x, String customerName, String gender, String dob, String phoneNo, String email, String mailingAddress) {
         customerID = setCustomerID(x);
         this.customerName = customerName;
         this.gender = gender;
@@ -47,7 +47,7 @@ public class Customer {
     }
 
     //update last changes
-    private void updateCtmChanges(){
+    public void updateCtmChanges(){
         temp = new String[]{customerName, gender, dob, phoneNo, email, mailingAddress};
     }
 

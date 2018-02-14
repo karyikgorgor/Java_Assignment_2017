@@ -34,8 +34,8 @@ public class Order {
     private ArrayList < Integer > quantityTemp; //for update
 
     //objects
-    Category product = new Category();
-    Scanner input = new Scanner(System. in );
+    private Category product = new Category();
+    private Scanner input = new Scanner(System. in );
 
     //constructor
     public Order(int x, String cust, int cID) {
@@ -160,7 +160,7 @@ public class Order {
                     ctg = handleExceptionsInt();
 
                     if (ctg < 1 || ctg > 3) {
-                        System.out.print("Invalid input");
+                        System.out.println("Invalid input");
                         loop = true;
                     } else {
                         loop = false;
@@ -171,7 +171,7 @@ public class Order {
                 do { //select item
                     secLoop = true;
                     product.getCategory(ctg);
-                    System.out.print("Enter the product ID to puchase without the 'P' (-1 to return to category):\n");
+                    System.out.println("Enter the product ID to puchase without the 'P' (-1 to return to category):\n");
                     item = handleExceptionsInt();
 
                     if (item == -1) {
@@ -213,13 +213,13 @@ public class Order {
                 option = handleExceptionsInt();
                 switch (option) {
                     case 1:
-                        loop = false;
-                        break;
-                    case 2:
                         setDeliveryType();
                         setSpecialRequest();
                         loop = false;
                         mainLoop = false;
+                        break;
+                    case 2:
+                        loop = false;
                         break;
                     default:
                         System.out.println("You've entered an unavailable choice. Please try again:");
@@ -286,12 +286,12 @@ public class Order {
     }
 
     //return delivery status
-    public String getStatus() {
+    private String getStatus() {
         return status;
     }
 
     //calculate sales
-    public void setSales() {
+    private void setSales() {
         int size = itemName.size();
         String name;
         int qnt;
@@ -327,7 +327,7 @@ public class Order {
     }
 
     //set the delivery type of the product
-    public void setDeliveryType() {
+    private void setDeliveryType() {
         int option;
         boolean loop = true;
         do {
@@ -355,12 +355,12 @@ public class Order {
     }
 
     //return delivery type
-    public String getDeliveryType() {
+    private String getDeliveryType() {
         return deliveryType;
     }
 
     //set special request
-    public void setSpecialRequest() {
+    private void setSpecialRequest() {
         boolean loop1 = true;
         boolean loop2 = false;
         int option;

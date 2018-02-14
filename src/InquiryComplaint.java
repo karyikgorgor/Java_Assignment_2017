@@ -20,13 +20,13 @@ public class InquiryComplaint {
     //array list for storing FAQs
     private ArrayList < String > productFAQ = new ArrayList < String > ();
     private ArrayList < String > deliveryFAQ = new ArrayList < String > ();
-    private ArrayList < String > paymentFAQ = new ArrayList < String > ();
+    private ArrayList < String > paymentFAQ = new ArrayList <> ();
     private ArrayList < String > orderFAQ = new ArrayList < String > ();
 
     private Scanner input = new Scanner(System. in );
 
     //function to add FAQ inside all the array lists
-    public void addFAQ() {
+    private void addFAQ() {
         productFAQ.add("1. What are the materials you use to make your products?\n" + "Answer: Our products are made with high grade stensile steel and 100% natural latex.\n");
         productFAQ.add("2. Where are your products manufactured?\n" + "Answer: They are manufactured in Malaysia as we believe in providing jobs to our own ecenomy.\n");
         productFAQ.add("3. Are your products certified safe?\n" + "Answer: Our products go through vigorous testing by us and also have obtained the SIRIM certificate.\n");
@@ -86,7 +86,7 @@ public class InquiryComplaint {
     }
 
     // inquiry menu
-    public void inquiry() {
+    private void inquiry() {
         boolean loop = true;
         System.out.println("Have a question? Check out our FAQ or submit an inquiry!");
         System.out.println("Enter 1 = FAQ");
@@ -117,7 +117,7 @@ public class InquiryComplaint {
     }
 
     // functions to print FAQs
-    public void FAQ() {
+    private void FAQ() {
         boolean loop = true;
         System.out.println("Frequently Asked Questions");
         System.out.println("--------------------------");
@@ -155,7 +155,7 @@ public class InquiryComplaint {
     }
 
     // Product FAQ
-    public void productFAQ() {
+    private void productFAQ() {
         System.out.println("Product [Frequently Asked Questions]");
         System.out.println("------------------------------------");
 
@@ -167,7 +167,7 @@ public class InquiryComplaint {
     }
 
     // Delivery FAQ
-    public void deliveryFAQ() {
+    private void deliveryFAQ() {
         System.out.println("Delivery [Frequently Asked Questions]");
         System.out.println("------------------------------------");
 
@@ -179,7 +179,7 @@ public class InquiryComplaint {
     }
 
     // Payment FAQ
-    public void paymentFAQ() {
+    private void paymentFAQ() {
         System.out.println("Payment [Frequently Asked Questions]");
         System.out.println("------------------------------------");
 
@@ -191,7 +191,7 @@ public class InquiryComplaint {
     }
 
     //order FAQ
-    public void orderFAQ() {
+    private void orderFAQ() {
         System.out.println("Order [Frequently Asked Questions]");
         System.out.println("------------------------------------");
 
@@ -203,7 +203,7 @@ public class InquiryComplaint {
     }
 
     // choices of inquiries
-    public void inquiryMenu() {
+    private void inquiryMenu() {
         System.out.println("Enter 1 = Product Related");
         System.out.println("Enter 2 = Delivery Related");
         System.out.println("Enter 3 = Payment Related");
@@ -211,7 +211,7 @@ public class InquiryComplaint {
         System.out.println("Enter 5 = Return to Help Center's main menu");
     }
     // processing choice of inquiry
-    public void submitInquiry() {
+    private void submitInquiry() {
         boolean loop = true;
 
         System.out.println("What is your inquiry about?");
@@ -249,7 +249,7 @@ public class InquiryComplaint {
     }
 
     // complaint Menu
-    public void complaintMenu() {
+    private void complaintMenu() {
         System.out.println("Enter 1 = Product related");
         System.out.println("Enter 2 = Delivery related");
         System.out.println("Enter 3 = Payment related");
@@ -258,7 +258,7 @@ public class InquiryComplaint {
     }
 
     // processing choice of complaints
-    public void submitComplaint() {
+    private void submitComplaint() {
         boolean loop = true;
         System.out.println("What is your complaint about?");
         complaintMenu();
@@ -300,7 +300,7 @@ public class InquiryComplaint {
     }
 
     //handle any input mismatch exceptions
-    public int handleExceptionsInt() {
+    private int handleExceptionsInt() {
         int error = 0;
         boolean loop = true;
         while (loop) {
@@ -319,7 +319,7 @@ public class InquiryComplaint {
     }
 
     //handle any invalid input
-    public void invalidInput() {
+    private void invalidInput() {
         System.out.println("Invalid input. Please try again: ");
     }
 

@@ -269,37 +269,37 @@ public class Operator {
         while (loop) {
             switch (getUpdateCustomer()) {
                 case 1:
-                    getCustomer(id).setCustomerName();
+                    getCustomer(id+1).setCustomerName();
                     setConfirmChangeCustomer();
                     loop = false;
                     break;
                 case 2:
-                    getCustomer(id).setGender();
+                    getCustomer(id+1).setGender();
                     setConfirmChangeCustomer();
                     loop = false;
                     break;
                 case 3:
-                    getCustomer(id).setDob();
+                    getCustomer(id+1).setDob();
                     setConfirmChangeCustomer();
                     loop = false;
                     break;
                 case 4:
-                    getCustomer(id).setEmail();
+                    getCustomer(id+1).setEmail();
                     setConfirmChangeCustomer();
                     loop = false;
                     break;
                 case 5:
-                    getCustomer(id).setMailingAddress();
+                    getCustomer(id+1).setMailingAddress();
                     setConfirmChangeCustomer();
                     loop = false;
                     break;
                 case 6:
-                    getCustomer(id).setCustomerName();
-                    getCustomer(id).setGender();
-                    getCustomer(id).setDob();
-                    getCustomer(id).setPhoneNo();
-                    getCustomer(id).setEmail();
-                    getCustomer(id).setMailingAddress();
+                    getCustomer(id+1).setCustomerName();
+                    getCustomer(id+1).setGender();
+                    getCustomer(id+1).setDob();
+                    getCustomer(id+1).setPhoneNo();
+                    getCustomer(id+1).setEmail();
+                    getCustomer(id+1).setMailingAddress();
                     setConfirmChangeCustomer();
                     loop = false;
                     break;
@@ -449,19 +449,19 @@ public class Operator {
             switch (confirmChange) {
                 case 1:
                     System.out.println("Updated successfully. New record below:\n");
-                    System.out.println(getCustomer(id));
-                    getCustomer(id).updateCtmChanges();
+                    System.out.println(getCustomer(id+1));
+                    getCustomer(id+1).updateCtmChanges();
                     loop = false;
                     break;
                 case 2:
-                    getCustomer(id).revertCtmChanges();
-                    System.out.println(getCustomer(id));
+                    getCustomer(id+1).revertCtmChanges();
+                    System.out.println(getCustomer(id+1));
                     updateCustomerMenu();
                     updateCustomerInfo();
                     loop = false;
                     break;
                 case 3:
-                    getCustomer(id).revertCtmChanges();
+                    getCustomer(id+1).revertCtmChanges();
                     loop = false;
                     System.out.println("Successfully redirected.");
                     break;

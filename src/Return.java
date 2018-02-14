@@ -23,7 +23,7 @@ public class Return {
     private DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
     private LocalDateTime now = LocalDateTime.now();
 
-    Scanner input = new Scanner(System. in );
+    private Scanner input = new Scanner(System. in );
 
     //constructor
     public Return(int id, String sales, int asscCust, int asscOrder) {
@@ -94,7 +94,7 @@ public class Return {
     }
 
     //return pickup date
-    public String getPickupDate() {
+    private String getPickupDate() {
         return dtf.format(pickupDate);
     }
 
